@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+      <button ion-button menuToggle>Menu</button>
+  </ion-navbar>
+</ion-header>
+
+<ion-menu [content]="mycontent">
+    <ion-content>
+      <ion-list>
+        <ion-item menuClose detail-none (click)="goScreenRegisterProduct()">Cadastrar Produto</ion-item>
+        <ion-item menuClose detail-none (click)="goScreenRegisterClient()">Cadastrar Cliente</ion-item>
+        <ion-item menuClose detail-none (click)="goScreenRegisterVenda()">Cadastrar Venda</ion-item>
+        <ion-item menuClose detail-none (click)="goScreenAccounts()">Contas</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-nav #mycontent [root]="rootPage"></ion-nav>
